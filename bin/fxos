@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'fxos/fxos'
+
+begin
+  fxos_session = FxOS.new(ARGV, STDIN)
+rescue
+  $stderr.print "#!Error: " + $!
+end
