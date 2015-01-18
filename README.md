@@ -1,0 +1,37 @@
+# FxOS
+The basic purpose is to provide some simple automations based upon common Git workflows
+
+## Usage
+
+Switch branches. If no branch is provided it will default to 'master'.  If the provided branch does not exist, it is created.
+```
+$ fxos switch [branch]
+```
+
+Rebase branch with in base of other branch. **DO NOT USE THIS FUNCTION, IS NOT COMPLETE**
+```
+$ fxos rebase [branch1] [branch2]
+```
+
+Push all the commits in your current branch to remote.
+```
+$ fxos push
+```
+
+Update your from with original repo code.
+```
+$ fxos fork [branch] 
+```
+
+Commit all the changes on your branch with a message.
+```
+$ fxos commit ['message']
+```
+
+Squash in one commit all the commits you want.
+```
+$ fxos squash [number-of-commits]
+```
+
+## License
+This tool is licensed under MIT terms.
