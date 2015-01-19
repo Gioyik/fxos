@@ -1,6 +1,23 @@
 # FxOS
 The basic purpose is to provide some simple automations based upon common Git workflows
 
+## Installation
+From Rubygems:
+```
+$ gem install fxos
+```
+
+From github:
+```
+$ gem "fxos", :git => "git://github.com/Gioyik/fxos.git"
+```
+
+From source:
+```
+$ gem build fxos.gemspec
+$ gem install ./fxos-X.X.X.gem
+```
+
 ## Usage
 
 Switch branches. If no branch is provided it will default to 'master'.  If the provided branch does not exist, it is created.
