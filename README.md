@@ -35,6 +35,11 @@ Push all the commits in your current branch to remote.
 $ fxos push
 ```
 
+Revert a commit.
+```
+$ fxos revert [commit]
+```
+
 Update your from with original repo code.
 ```
 $ fxos fork [branch] 

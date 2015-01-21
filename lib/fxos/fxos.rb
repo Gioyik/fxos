@@ -52,6 +52,13 @@ class FxOS
           branch = args[1] ? args[1] : '#{@current}'
           `git branch -D #{branch}`
           break
+        when "revert"
+          # I am thinking if this should remove local and 
+          # remote tags. Let's hear some feedback about
+          # this and decide it later.
+          commit = args[1]
+          `git branch -D #{commit}`
+          break
         when "log"
           # I know this has not full avantage but it will
           # help someone.
@@ -100,8 +107,9 @@ class FxOS
     puts "fxos switch [branch]             :Change to [branch]. If not exists it will be created.\n"
     puts "fxos rebase [branch1] [branch2]  :Rebase branch with in base of other branch.\n"
     puts "fxos fork [branch]               :Update your from with original repo code.\n"
-    puts "fxos log                         :Show all your commit logs."
-    puts "fxos del-branch [branch]         :Delete a branch locally."
+    puts "fxos revert [commit]             :Revert a commit.\n"
+    puts "fxos log                         :Show all your commit logs.\n"
+    puts "fxos del-branch [branch]         :Delete a branch locally.\n"
     puts "fxos commit ['message']          :Commit all the changes on your branch with a message.\n"
     puts "fxos squash [number-of-commits]  :Squash in one commit all the commits you want\n"
     puts "fxos push                        :Push all the commits in your current branch to remote.\n"
