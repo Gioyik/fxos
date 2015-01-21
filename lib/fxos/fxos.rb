@@ -45,6 +45,18 @@ class FxOS
           `git pull --rebase upstream #{branch}`
           `git push origin -f #{@current}`
           break
+        when "del-branch"
+          # I am thinking if this should remove local and 
+          # remote tags. Let's hear some feedback about
+          # this and decide it later.
+          branch = args[1]
+          `git branch -D #{branch}`
+          break
+        when "log"
+          # I know this has not full avantage but it will
+          # help someone.
+          `git log`
+          break
         when "commit"
           # here we need find the way to get the text
           # inside "". DO NOT USE IT
@@ -88,6 +100,7 @@ class FxOS
     puts "fxos switch [branch]             :Change to [branch]. If not exists it will be created.\n"
     puts "fxos rebase [branch1] [branch2]  :Rebase branch with in base of other branch.\n"
     puts "fxos fork [branch]               :Update your from with original repo code.\n"
+    puts "fxos log                         :Show all your commit logs."
     puts "fxos commit ['message']          :Commit all the changes on your branch with a message.\n"
     puts "fxos squash [number-of-commits]  :Squash in one commit all the commits you want\n"
     puts "fxos push                        :Push all the commits in your current branch to remote.\n"
