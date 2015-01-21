@@ -49,7 +49,7 @@ class FxOS
           # I am thinking if this should remove local and 
           # remote tags. Let's hear some feedback about
           # this and decide it later.
-          branch = args[1]
+          branch = args[1] ? args[1] : '#{@current}'
           `git branch -D #{branch}`
           break
         when "log"
