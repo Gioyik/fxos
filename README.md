@@ -40,6 +40,16 @@ Update your from with original repo code.
 $ fxos fork [branch] 
 ```
 
+Log your git repository.
+```
+$ fxos log 
+```
+
+Delete a branch locally. If you want to delete it remotely too, do `fxos push` after this commit. ** NOTE ** If the branch is not specified it will delete the current branch you are. Be carefull!
+```
+$ fxos fork [branch] 
+```
+
 Commit all the changes on your branch with a message.
 ```
 $ fxos commit ['message']

@@ -101,6 +101,7 @@ class FxOS
     puts "fxos rebase [branch1] [branch2]  :Rebase branch with in base of other branch.\n"
     puts "fxos fork [branch]               :Update your from with original repo code.\n"
     puts "fxos log                         :Show all your commit logs."
+    puts "fxos del-branch [branch]         :Delete a branch locally."
     puts "fxos commit ['message']          :Commit all the changes on your branch with a message.\n"
     puts "fxos squash [number-of-commits]  :Squash in one commit all the commits you want\n"
     puts "fxos push                        :Push all the commits in your current branch to remote.\n"
