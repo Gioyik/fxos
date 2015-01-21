@@ -1,5 +1,5 @@
 # FxOS
-The basic purpose is to provide some simple automations based upon common Git workflows
+The basic purpose is to provide some simple automations based upon common Firefox OS git workflows
 
 ## Installation
 From Rubygems:
